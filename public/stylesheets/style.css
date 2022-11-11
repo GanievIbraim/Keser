@@ -2,54 +2,51 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
     margin: 0;
     padding: 0;
-    color: #182033;}
+    color: #212529}
 
-body {
-    background: #c2c1bd;
-    background-attachment: fixed;}
 
-.menu {
-    display: flex;
-    box-sizing: border-box;
-    background: #182033;
+.header img{
+    margin: 10px 0;
+    margin-left: 150px;
     height: 10vh;
-    justify-content: center;
+}
+.header{
+    height: 12vh;
 }
 
-.menu a{
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+#container a{
     margin-right: 50px;
-    height: 10vh;
-    letter-spacing: 8px;
-    color: #c2c1bd;
-    font-size: 1.5rem;
-    transition: 0.8s;}
-
-.menu a:hover{
-    background: #c2c1bd;
-    color: #182033;
+    font-size: 1.2rem;
+    color: #c5c5c5;
 }
-a {
-    font-weight: 500;
-    text-decoration: none;}
+#container a:hover{
+    margin-right: 50px;
+    font-size: 1.2rem;
+    color: white;
+}
+#container{
+    margin-left: 150px;
+}
 
-.info{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 40%;
-    height: 15%;
-    text-align: center;}
+#product_table img{
+    height: 550px;
+    border: 1px solid black;
+}
 
-h1{
-    font-size: 4rem;}
+#inf_product{
+    padding: 20px;
+}
 
-p{
-    font-size: 1.5rem;}
+#inf_product h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h5{
+    color: #31363b;
+}
+#product_table{
+    height: 60vh;
+    display: flex;
+    margin: 0 150px;
+}

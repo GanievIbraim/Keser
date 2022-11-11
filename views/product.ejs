@@ -1,14 +1,38 @@
 <% layout('layout/page.ejs') %>
-
-<div class="menu">
-    <a href="">Price Tag</a>
-    <a href="">Tablet</a>
-    <a href="">Menuholder</a>
-    <a href="">Napkin Holder</a>
+<div class="header">
+    <img src="images/logo.png">
 </div>
 
-<h1><%= title %></h1>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+    <div class="container-fluid" id="container">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Napkin Holder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Menuholder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tablet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Price Tag Holder</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    
 
-<img src="<%= picture %>" alt=""/>
-
-<h4>Несколько слов о товаре: <%=desc%></h4>
+  <h3 style="margin-left: 170px; margin-top: 50px;">Товар / <%= title %></h3>
+  <div id="product_table" >
+      <img src="<%= picture %>" alt=""/>
+      <div id="inf_product">
+          <h3><%= title %></h3>
+          <h2>100<span style="font-size: 1.2rem;"> руб</span></h2>
+          <span style="font-size: 1.2rem;">50 в наличии</span>
+          <div style="width: 100%; border-top: 0.5px solid rgb(218, 218, 218); margin-top: 50px; margin-bottom: 30px;"></div>
+          <h3>Описание товара:</h3>
+          <h5><%=desc%></h5>
+      </div>
+      
+  </div >
