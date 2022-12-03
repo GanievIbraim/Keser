@@ -8,6 +8,7 @@ schema.methods.complete = function(){
 }
 var Prod = mongoose.model('Prod', schema)
 
+
 var item = new Prod({ name: 'Значок' })
 item.save(function (err) {
     item.complete()
