@@ -41,7 +41,7 @@ app.use(function(req,res,next){
     next()
 })
 
-
+app.use(require("./middleware/createMenu.js"))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', products);

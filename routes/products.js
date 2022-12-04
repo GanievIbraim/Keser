@@ -10,26 +10,27 @@ router.get('/', function(req, res, next) {
 
 /* Страница продуктов */
 router.get('/:nick', function(req, res, next) {
-    async.parallel([
-            function(callback){
-                Product.findOne({nick:req.params.nick}, callback)
-            },
-            function(callback){
-                Product.find({},{_id:0,title:1,nick:1},callback)
-            }
-        ],
+    Product.findOne({nick:req.params.nick}, function(err,Product){
+        if(err) return next(err)
+        if(!Product) return next(new Error("Такого товара нет в наличии!"))
+        res.render('Product', {
+            title: Product.title,
+            picture: Product.avatar,
+            desc: Product.desc
+        })
+    })
+    
+    /*
         function(err,result){
             if(err) return next(err)
-            var Product = result[0]
-            var Products = result[1] || []
             if(!Product) return next(new Error("Такого товара нет в наличии!"))
             res.render('Product', {
                 title: Product.title,
                 picture: Product.avatar,
                 desc: Product.desc,
-                menu: Products
             });
         })
+    */
 })
 
 module.exports = router;
