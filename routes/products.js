@@ -32,22 +32,4 @@ router.get('/:nick', function(req, res, next) {
         })
 })
 
-
-
-/* Страница продуктов 
-router.get('/:nick', function(req, res, next) {
-    Product.findOne({nick:req.params.nick}, function(err,Product){
-        if(err) return next(err)
-        if(!Product) return next(new Error("Нет такого товара"))
-        res.render('Product', {
-            title: Product.title,
-            picture: Product.avatar,
-            desc: Product.desc
-        })
-    })
-})
-*/
-
-
-
 module.exports = router;
