@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var checkAuth = require("./../middleware/checkAuth.js")
 var Product = require("../models/product").Product
 var User = require("./../models/user").User
 
@@ -18,7 +19,7 @@ router.post('/logreg', function(req, res, next) {
 
     User.findOne({username:username},function(err,user){
         if(err) return next(err)
-        
+
         if(user){
             if(!password){
                 req.session.user = user._id
