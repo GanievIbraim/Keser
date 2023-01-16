@@ -1,5 +1,11 @@
 <% layout('layout/page.ejs') %>
 
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<div id="error_table">
+    <div>
+        <h1>Что-то пошло не так...</h1>
+        <h2><%= message %></h2>
+        <h2><%= error.status %></h2>
+    </div>
+    
+    <img src="/images/error.png" style="width: 25%;">
+</div>
